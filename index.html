@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js function</title>
+        <!-- <h1>js function</h1> -->
+        <script>
+            //before closing tag
+        </script>
+    </head>
+    <body>
+        <From>
+            <!-- <input type="text" name="fname"  placeholder="Enter your first name"> -->
+            <!-- <input type="text" name="lname" placeholder="Enter your last name"> -->
+            <!-- <input type="submit" value="Save" onclick="saveData(event)"> -->
+            <input type="text" name="firstname" placeholder="Enter your first name">
+            <input type="text" name="lastname"  placeholder="Enter your last name" >
+            
+            <input type="submit" name="Save"  onclick="saveData(event)" >
+
+        </From>
+            <ul id="myul">
+                <li></li>
+                
+            </ul>
+            <script>
+                let myul=document.getElementById("myul")
+                myul.innerHTML="";
+
+                function saveData(e){//e =event formal arguments
+                    //object:propertyname
+                    //objecr:method
+                    e.preventDefault();
+                    console.log();
+
+                    //local variables
+
+                    let fn=document.querySelector('input[name="firstname"]')
+                    let sn=document.querySelector('input[name="lastname"]')
+
+                    console.log(fn);
+                    console.log(sn);
+
+                    myul.innerHTML+= '<li>'+fn.value+' '+sn.value+'</li>';                }
+            </script>
+        
+    </body>
+    </html>
